@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Ramaraja&family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+:root { --ink:#222220; --paper:#fff; --soft:#f2eeee; --rose:#b76767; --wine:#85142d; --taupe:#89716b; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:var(--paper); font-family:'Red Hat Display',Arial,sans-serif; }
+a { color:inherit; }
+.hero { position:relative; height:min(82vh,790px); min-height:560px; overflow:hidden; background:#eee9e7; }
+.hero-image { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.hero-copy { position:absolute; z-index:1; top:21%; left:52%; right:6%; }
+.hero-copy h1 { margin:0 0 18px; color:var(--taupe); font-size:clamp(2.3rem,4.5vw,4.4rem); line-height:.9; font-weight:900; text-transform:uppercase; }
+.hero-copy p { margin:0; color:#b3a8a8; font-family:'Open Sans',sans-serif; font-size:clamp(1.1rem,2vw,1.65rem); line-height:1.4; font-weight:700; }
+.button { display:inline-block; margin-top:38px; padding:18px 38px; border-radius:5px; background:var(--soft); font-size:1.1rem; font-weight:900; text-decoration:none; text-transform:uppercase; transition:.25s; }
+.button:hover,.button:focus { background:var(--taupe); color:white; }
+.section { padding:54px 0 36px; }
+.container { width:min(80%,1180px); margin:auto; }
+h2 { margin:0 0 32px; font-family:Ramaraja,Georgia,serif; font-size:clamp(2.1rem,4vw,3.25rem); line-height:1; font-weight:400; text-transform:uppercase; }
+.entries { width:80%; margin:auto; }
+.entries p,.featured { margin:0 0 25px; font-size:1.25rem; line-height:1.45; }
+.entries strong { color:var(--wine); font-weight:500; }
+.dark { color:var(--soft); background:var(--ink); }
+.dark em,.dark thead { color:var(--rose); font-style:normal; }
+.accent { color:white; background:var(--rose); }
+.accent h2 { color:var(--ink); }
+.featured { margin-top:-20px; }
+.table-wrap { width:70%; margin:auto; overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:1.25rem; }
+th,td { padding:11px 18px; text-align:left; border-bottom:1px solid rgba(255,255,255,.15); }
+th { color:var(--rose); text-transform:uppercase; }
+.contact { min-height:720px; padding:52px 20px 65px; text-align:center; }
+.portrait { display:block; width:min(240px,55vw); aspect-ratio:1; margin:0 auto 36px; object-fit:cover; border-radius:50%; }
+.contact h2 { margin-bottom:12px; color:var(--taupe); font-family:'Red Hat Display',sans-serif; font-size:1.65rem; font-weight:900; }
+.contact p { margin:5px 0; font-size:1.45rem; font-weight:500; }
+.contact p a { text-decoration:none; }
+.contact p a:hover { text-decoration:underline; }
+.socials { display:flex; justify-content:center; gap:26px; margin:24px 0 18px; }
+.socials img { display:block; width:50px; height:50px; opacity:.82; transition:.2s; }
+.socials a:hover img { opacity:1; transform:translateY(-2px); }
+.cv { display:block; color:var(--rose); font-size:1.35rem; font-weight:500; }
+@media (max-width:900px) {
+  .hero { height:54vh; min-height:430px; }
+  .hero-copy { top:20%; left:51%; right:3%; }
+  .container { width:90%; }
+  .entries { width:90%; }
+  .table-wrap { width:85%; }
+}
+@media (max-width:600px) {
+  .hero { height:420px; min-height:0; background:linear-gradient(90deg,#e7ddda,#eee); }
+  .hero-image { object-position:36% center; opacity:.55; }
+  .hero-copy { top:auto; bottom:32px; left:24px; right:18px; }
+  .hero-copy h1 { max-width:420px; font-size:2rem; text-shadow:0 1px 12px rgba(255,255,255,.9); }
+  .hero-copy p { color:#625756; font-size:1rem; }
+  .button { margin-top:18px; padding:12px 20px; font-size:.82rem; }
+  .section { padding:40px 0 24px; }
+  .container,.entries { width:92%; }
+  h2 { text-align:center; font-size:2rem; }
+  .entries p,.featured,table { font-size:1rem; }
+  .table-wrap { width:100%; }
+  th,td { padding:9px 10px; }
+  .contact { min-height:0; }
+  .contact p { font-size:1.1rem; }
+}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
